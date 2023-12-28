@@ -36,4 +36,4 @@ jobs:
         pytest
     - name: Build Docker image
       run: |
-        docker build -t my-app -f Task-3/python-dockerfile
+        docker build -t my-app -f Task-3/python-dockerfile .
