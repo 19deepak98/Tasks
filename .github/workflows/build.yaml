@@ -54,5 +54,13 @@ jobs:
         ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
         IMAGE_TAG: ${{ github.sha }}
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f Task-3/src/python-dockerfile .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:latest -f Task-3/src/python-dockerfile .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+
+    - name: Update kube config
+      run: aws eks update-kubeconfig --name cluster_name
+    
+    - name: Deploy to EKS
+      run: |
+        kubectl apply -f deployment.yaml
+        kubectl apply -f service.yaml
