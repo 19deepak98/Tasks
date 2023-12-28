@@ -1,4 +1,5 @@
-from app import add_numbers
+from app import index
 
-def test_add_numbers():
-    assert add_numbers(3, 4) == 7
+
+def test_index():
+    assert index() == "Hello, world!"

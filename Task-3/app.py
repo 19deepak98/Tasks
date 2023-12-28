@@ -1,6 +1,11 @@
-def add_numbers(a, b):
-    return a + b
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return "Hello, world!"
+
 
 if __name__ == "__main__":
-    result = add_numbers(3, 4)
-    print(f"The sum is: {result}")
+    app.run()
