@@ -1,27 +1,27 @@
-variable "aws_region" {
-  description = "AWS region"
-  type        = string
-  default     = "us-west-2"
+# variable "region" {
+#   description = "AWS region"
+# }
+
+# variable "vpc_cidr" {
+#   description = "CIDR block for the VPC"
+# }
+
+variable "vpc_name" {
+  description = "Name tag for the VPC"
 }
 
-variable "vpc_cidr" {
-  description = "CIDR block for the VPC"
-  type        = string
-  default     = "20.0.0.0/16"
-}
+# variable "public_subnet_cidr" {
+#   description = "CIDR block for the public subnet"
+# }
 
-variable "ami" {
-  description = "AMI ID for the EC2 instance"
-  type        = string
-}
+# variable "public_subnet_az" {
+#   description = "Availability zone for the public subnet"
+# }
 
-variable "instance_type" {
-  description = "EC2 instance type"
-  type        = string
-  default     = "t2.micro"
-}
+# variable "private_subnet_cidr" {
+#   description = "CIDR block for the private subnet"
+# }
 
-variable "key_name" {
-  description = "SSH key pair name"
-  type        = string
-}
+# variable "private_subnet_az" {
+#   description = "Availability zone for the private subnet"
+# }

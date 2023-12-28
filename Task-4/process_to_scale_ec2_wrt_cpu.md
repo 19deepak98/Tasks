@@ -12,3 +12,6 @@
     c. Will select ALB and it can be exsting one or can create a new one in ASG settings.
 3. Than will create a cloudwatch alarm and in trigger will choose the ASG that we created in second step.
 4. Now in ASG will create dynamic scaling policy using step scaling in which we choose the alarm that we created and setup the trigger policy.
+
+
+Note - Here I wrote all the steps which we can do, because we also had same type of setup in my current company for blogs that's why I had the idea of this.
